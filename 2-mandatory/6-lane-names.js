@@ -6,7 +6,11 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+function getLanes( londonNames )
+{
+  var laneName = londonNames.filter( ( a ) => a.includes( "Lane" ) );
+  return laneName;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -18,6 +22,7 @@ const streetNames = [
   "Alban Highwalk",
 ];
 
+const { listenerCount } = require( "process" );
 const util = require("util");
 
 function test(test_name, actual, expected) {

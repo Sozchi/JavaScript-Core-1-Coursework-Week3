@@ -23,6 +23,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  var my_regex = /(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\!#\$%\.\*&])[A-Za-z\d\!#\$%\.\*&]{5,}/
+  return passwords.map(( el, index ) => !!el.match( my_regex ) && passwords.indexOf( el ) === index);
 
 }
 

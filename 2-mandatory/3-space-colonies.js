@@ -15,7 +15,12 @@
   
 */
 
-function colonisers() {}
+function colonisers( aFamily )
+{
+  var aFamilyList = aFamily.filter( a => a.substring( 0, 1 ) === "A" && a.includes( "family" ) );
+  return aFamilyList;
+  
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
